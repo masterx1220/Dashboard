@@ -10,3 +10,8 @@ body {
     -o-background-size: cover;
     background-size: cover;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+}
