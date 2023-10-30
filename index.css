@@ -19,7 +19,8 @@ body {
 
 #author{
     display: flex;
-    justify-content: center;
+    margin: 0;
+    position: relative;
 }
 
 .search-bar{
@@ -32,4 +33,10 @@ body {
 p{
     color: white;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black
+}
+
+.bottom-left{
+    position: absolute;
+    top: 90vh;
+    left: 15px;
 }
