@@ -11,7 +11,19 @@ body {
     background-size: cover;
 }
 
-.container{
+#container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+}
+
+#author{
+    display: flex;
+    justify-content: center;
+}
+
+/*****Topography******/
+p{
+    background: whitesmoke;
+    color: black;
 }

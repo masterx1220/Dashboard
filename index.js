@@ -7,6 +7,9 @@ searchBtnEl.addEventListener("click", function(e){
     .then(res => res.json())
     .then(data => {
         document.body.style.backgroundImage = `url(${data.urls.regular})`
+        document.getElementById("author").innerHTML = `
+            <p>Photographer: ${data.user.username}</p>
+        `
         // console.log(data.urls)
         console.log(searchValue)
     })
