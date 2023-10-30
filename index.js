@@ -2,6 +2,7 @@ const search = document.getElementById("backgroundSearch")
 const searchBtnEl = document.getElementById("searchBtn")
 
 searchBtnEl.addEventListener("click", function(e){
+    e.preventDefault()
     let searchValue = search.value
     fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=${searchValue}`)
     .then(res => res.json())
