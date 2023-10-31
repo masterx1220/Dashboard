@@ -1,3 +1,7 @@
+*{
+    box-sizing: border-box;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -13,8 +17,10 @@ body {
 
 #container{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
+    position: relative;
+    height: 100vh;
 }
 
 #author{
@@ -36,7 +42,15 @@ p{
 }
 
 .bottom-left{
-    position: absolute;
-    top: 90vh;
+    /* position: absolute; */
+    top: 94vh;
     left: 15px;
+}
+
+#time{
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%, -50%); */
+    text-align: center;
 }
