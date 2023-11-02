@@ -66,9 +66,14 @@ navigator.geolocation.getCurrentPosition(position => {
             console.log(data)
             const temp = Math.floor(data.main.temp)
             document.getElementById("weather").innerHTML = `
-                <img id="icon" src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
+            <div class="weatherAndTemperatureContainer">
+                <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
                 <p class="temperature">${temp}°</p>
-            `
+            </div>
+            <div class="city">
+                <p class="city">${data.name}</p>
+            </div>
+        `
         })
         .catch(err => console.error(err))
 })
