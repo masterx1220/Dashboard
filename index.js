@@ -29,7 +29,6 @@ function getRandomPhoto(search){
         document.getElementById("author").innerHTML = `
             <p class="bottom-left">Photographer: ${data.user.username}</p>
         `
-        console.log(searchValue)
     })
 }
 
@@ -65,7 +64,7 @@ navigator.geolocation.getCurrentPosition(position => {
         .then(data => {
             console.log(data)
             const temp = Math.floor(data.main.temp)
-            document.getElementById("weather").innerHTML = `
+            document.getElementBId("weather").innerHTML = `
             <div class="weatherAndTemperatureContainer">
                 <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
                 <p class="temperature">${temp}°</p>
@@ -75,5 +74,11 @@ navigator.geolocation.getCurrentPosition(position => {
             </div>
         `
         })
-        .catch(err => console.error(err))
+        .catch(err => {
+            document.getElementById("weather").innerHTML = `
+            <div class="weatherAndTemperatureContainer">
+                <p class="temperature">Temperature information not avilable at this time.</p>
+            </div>
+            `
+        })
 })
