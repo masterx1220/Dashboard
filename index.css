@@ -53,6 +53,7 @@ body {
 #time-container{
     text-align: center;
     gap: 10px;
+    cursor: default;
 }
 
 #time-container:hover{
