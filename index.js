@@ -47,8 +47,8 @@ function getCurrentTime(){
     }
     let current_day = daysOfTheWeek[day]
     document.getElementById("time-container").innerHTML = `
-    <h2 id="day">Today is ${current_day}</h2>
     <h1 id="time">${current_Time}</h1>
+    <h2 id="day">Today is ${current_day}</h2>
     `
 }
 setInterval(getCurrentTime,1000)
@@ -82,3 +82,20 @@ navigator.geolocation.getCurrentPosition(position => {
             `
         })
 })
+
+// fetch(`https://api.quotable.io/random?minLength=100&maxLength=140`)
+//     .then(res => {
+//         if(!res.ok){
+//             throw Error("Sorry this quote is available")
+//         }
+//         return res.json()
+//     })
+//     .then(data => {
+//         console.log(data)
+//         document.getElementById("quote-container").innerHTML = `
+//             <div id="quote">
+//                 <p>-  ${data.content}</p>
+//             </div>
+        
+//         `
+//     })
