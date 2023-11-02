@@ -64,7 +64,7 @@ navigator.geolocation.getCurrentPosition(position => {
         .then(data => {
             console.log(data)
             const temp = Math.floor(data.main.temp)
-            document.getElementBId("weather").innerHTML = `
+            document.getElementById("weather").innerHTML = `
             <div class="weatherAndTemperatureContainer">
                 <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
                 <p class="temperature">${temp}°</p>
