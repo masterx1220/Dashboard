@@ -27,7 +27,7 @@ body {
     margin: 0;
     padding: 0;
     position:absolute;
-    top: 40px;
+    top: 20px;
     left: 95vw;
     display: flex;
     align-items: center;
@@ -44,6 +44,14 @@ body {
     justify-content: center;
 }
 
+#time-container{
+    text-align: center;
+}
+
+#time-container:hover{
+    /* animation: fade 1.5s ease-out 0s 1 none; */
+    opacity: 100%;
+}
 
 /*****Topography******/
 p, h1, h2{
@@ -56,9 +64,6 @@ p, h1, h2{
     font-size: 22px;
 }
 
-#time-container{
-    text-align: center;
-}
 
 .temperature{
     font-size: 30px;
@@ -68,4 +73,16 @@ p, h1, h2{
 /*****Img, Icon, Etc...******/
 .icon{
     width: 40px;
+}
+/*****Img, Icon, Etc...******/
+
+/*****Animations******/
+@keyframes fade {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 100%;
+    }
 }
