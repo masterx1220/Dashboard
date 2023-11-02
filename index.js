@@ -52,5 +52,23 @@ function getCurrentTime(){
     <h1 id="time">${current_Time}</h1>
     `
 }
-
 setInterval(getCurrentTime,1000)
+
+navigator.geolocation.getCurrentPosition(position => {
+    fetch(`https://apis.scrimba.com/openweathermap/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&units=imperial`)
+        .then(res => {
+            if(!res.ok){
+                throw Error("Weather data not available")
+            }
+            return res.json()
+        })
+        .then(data => {
+            console.log(data)
+            const temp = Math.floor(data.main.temp)
+            document.getElementById("weather").innerHTML = `
+                <img id="icon" src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png">
+                <p class="temperature">${temp}°</p>
+            `
+        })
+        .catch(err => console.error(err))
+})

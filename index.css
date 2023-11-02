@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body, p {
     margin: 0;
     padding: 0;
 }
@@ -21,6 +21,16 @@ body {
     flex-direction: column;
     position: relative;
     height: 100vh;
+}
+
+#weather{
+    margin: 0;
+    padding: 0;
+    position:absolute;
+    top: 40px;
+    left: 95vw;
+    display: flex;
+    align-items: center;
 }
 
 #author{
@@ -43,8 +53,19 @@ p, h1, h2{
 
 .bottom-left{
     margin-left: 15px;
+    font-size: 22px;
 }
 
 #time-container{
     text-align: center;
+}
+
+.temperature{
+    font-size: 30px;
+}
+/*****Topography End******/
+
+/*****Img, Icon, Etc...******/
+.icon{
+    width: 40px;
 }
