@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-html, body, p {
+html, body, p, h1, h2 {
     margin: 0;
     padding: 0;
 }
@@ -46,11 +46,11 @@ body {
 
 #time-container{
     text-align: center;
+    gap: 10px;
 }
 
 #time-container:hover{
-    /* animation: fade 1.5s ease-out 0s 1 none; */
-    opacity: 100%;
+    animation: fade 1.5s ease forwards;
 }
 
 /*****Topography******/
@@ -64,7 +64,6 @@ p, h1, h2{
     font-size: 22px;
 }
 
-
 .temperature{
     font-size: 30px;
 }
@@ -76,13 +75,13 @@ p, h1, h2{
 }
 /*****Img, Icon, Etc...******/
 
-/*****Animations******/
 @keyframes fade {
     0%{
-        opacity: 0;
+        opacity: 1;
     }
 
     100%{
-        opacity: 100%;
+        opacity: 0;
     }
 }
+
