@@ -43,7 +43,7 @@ function getCurrentTime(){
         4 : "Thurday",
         5 : "Friday",
         6 : "Saturday",
-        7 : "Sunday"
+        0 : "Sunday"
     }
     let current_day = daysOfTheWeek[day]
     document.getElementById("time-container").innerHTML = `
@@ -83,19 +83,20 @@ navigator.geolocation.getCurrentPosition(position => {
         })
 })
 
-// fetch(`https://api.quotable.io/random?minLength=100&maxLength=140`)
-//     .then(res => {
-//         if(!res.ok){
-//             throw Error("Sorry this quote is available")
-//         }
-//         return res.json()
-//     })
-//     .then(data => {
-//         console.log(data)
-//         document.getElementById("quote-container").innerHTML = `
-//             <div id="quote">
-//                 <p>-  ${data.content}</p>
-//             </div>
+fetch(`https://api.quotable.io/random?minLength=100&maxLength=140`)
+    .then(res => {
+        if(!res.ok){
+            throw Error("Sorry this quote is available")
+        }
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+        document.getElementById("quote-container").innerHTML = `
+            <div id="quote">
+                <p class="quote">${data.content}</p>
+                <p class="author">- ${data.author}</p>
+            </div>
         
-//         `
-//     })
+        `
+    })
