@@ -40,11 +40,11 @@ body {
     align-items: center;
 }
 
-#author{
+/* #author{
     display: flex;
     margin: 0;
     position: relative;
-}
+} */
 
 .search-bar{
     display: flex;
@@ -62,8 +62,12 @@ body {
     transform: translate(-50%,-50%)
 }
 
-#time-container:hover{
+.hide-background{
     animation: fade 1.5s ease forwards;
+}
+
+.show-background{
+    animation: fade-in 1.5s ease forwards;
 }
 
 #quote-container{
@@ -125,9 +129,37 @@ p, h1, h2{
 }
 /*****Topography End******/
 
-/*****Img, Icon, Etc...******/
+/*****Img, Icon, Buttons, Etc...******/
 .icon{
     width: 50px;
+}
+
+#backgroundPhoto{
+    margin: auto;
+    width: auto;
+    position: absolute;
+    left: 98%;
+    top: 98%;
+    transform: translate(-50%,-50%);
+    background: none;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    color: whitesmoke;
+    padding: .3em .6em;
+
+}
+
+#content{
+    /* display: none; */
+    margin: auto;
+    width: auto;
+    position: absolute;
+    left: 93%;
+    top: 98%;
+    transform: translate(-50%,-50%);
+    background: none;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    color: whitesmoke;
+    padding: .3em .6em;
 }
 /*****Img, Icon, Etc...******/
 
@@ -141,3 +173,12 @@ p, h1, h2{
     }
 }
 
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}

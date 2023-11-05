@@ -1,5 +1,9 @@
 const search = document.getElementById("backgroundSearch")
 const searchBtnEl = document.getElementById("searchBtn")
+const timeContainerEl = document.getElementById("time-container")
+const quoteContainerEl = document.getElementById("quote-container")
+const weatherEl = document.getElementById("weather")
+const authorEl = document.getElementById("author")
 
 window.onload = getPhoto()
 
@@ -62,7 +66,7 @@ navigator.geolocation.getCurrentPosition(position => {
             return res.json()
         })
         .then(data => {
-            console.log(data)
+            // console.log(data)
             const temp = Math.floor(data.main.temp)
             document.getElementById("weather").innerHTML = `
             <div class="weatherAndTemperatureContainer">
@@ -83,6 +87,38 @@ navigator.geolocation.getCurrentPosition(position => {
         })
 })
 
+function hideBackground(){
+        document.getElementById("backgroundPhoto").addEventListener("click", function(){
+            timeContainerEl.classList.remove("show-background")
+            quoteContainerEl.classList.remove("show-background")
+            weatherEl.classList.remove("show-background")
+            authorEl.classList.remove("show-background")
+
+            timeContainerEl.classList.add("hide-background")
+            quoteContainerEl.classList.add("hide-background")
+            weatherEl.classList.add("hide-background")
+            authorEl.classList.add("hide-background")
+        })
+}
+
+function showContent(){
+    document.getElementById("content").addEventListener("click", function(){
+        timeContainerEl.classList.remove("hide-background")
+        quoteContainerEl.classList.remove("hide-background")
+        weatherEl.classList.remove("hide-background")
+        authorEl.classList.remove("hide-background")
+
+        timeContainerEl.classList.add("show-background")
+        quoteContainerEl.classList.add("show-background")
+        weatherEl.classList.add("show-background")
+        authorEl.classList.add("show-background")
+        
+    })
+}
+
+hideBackground()
+showContent()
+
 fetch(`https://api.quotable.io/random?minLength=100&maxLength=140`)
     .then(res => {
         if(!res.ok){
@@ -91,7 +127,7 @@ fetch(`https://api.quotable.io/random?minLength=100&maxLength=140`)
         return res.json()
     })
     .then(data => {
-        console.log(data)
+        // console.log(data)
         document.getElementById("quote-container").innerHTML = `
             <div id="quote">
                 <p class="quote">${data.content}</p>
