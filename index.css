@@ -135,10 +135,10 @@ p, h1, h2{
 }
 
 #backgroundPhoto{
-    margin: auto;
+    margin: 0;
     width: auto;
     position: absolute;
-    left: 96%;
+    left: 95.5%;
     top: 98%;
     transform: translate(-50%,-50%);
     background: none;
@@ -147,15 +147,21 @@ p, h1, h2{
     padding: .3em .6em;
     border-radius: 5px;
     padding: 1em 3em;
+    letter-spacing: 0.2em;
 
+}
+
+#backgroundPhoto:hover{
+    background: inherit;
+    text-decoration: underline;
 }
 
 #content{
     /* display: none; */
-    margin: auto;
+    margin: 0;
     width: auto;
     position: absolute;
-    left: 90%;
+    left: 88%;
     top: 98%;
     transform: translate(-50%,-50%);
     background: none;
@@ -164,6 +170,12 @@ p, h1, h2{
     padding: .3em .6em;
     border-radius: 5px;
     padding: 1em 3em;
+    letter-spacing: 0.2em;
+}
+
+#content:hover{
+    background: inherit;
+    text-decoration: underline;
 }
 /*****Img, Icon, Etc...******/
 
