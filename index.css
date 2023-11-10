@@ -49,6 +49,7 @@ body {
 .search-bar{
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 #time-container{
@@ -130,6 +131,19 @@ p, h1, h2{
 /*****Topography End******/
 
 /*****Img, Icon, Buttons, Etc...******/
+#backgroundSearch{
+    border: none;
+    padding: 5px 8px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#searchBtn{
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+border: none;
+}
+
 .icon{
     width: 50px;
 }
@@ -146,9 +160,8 @@ p, h1, h2{
     color: whitesmoke;
     padding: .3em .6em;
     border-radius: 5px;
-    padding: 1em 3em;
+    padding: 1em 2em;
     letter-spacing: 0.2em;
-
 }
 
 #backgroundPhoto:hover{
@@ -169,7 +182,7 @@ p, h1, h2{
     color: whitesmoke;
     padding: .3em .6em;
     border-radius: 5px;
-    padding: 1em 3em;
+    padding: 1em 2em;
     letter-spacing: 0.2em;
 }
 
