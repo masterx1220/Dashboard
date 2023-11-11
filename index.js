@@ -18,10 +18,11 @@ function getPhoto(){
     fetch(`https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=random`)
     .then(res => res.json())
     .then(data => {
-        console.log(data)
+        // console.log(data.user.portfolio_url)
+        console.log(data.user.links.self)
         document.body.style.backgroundImage = `url(${data.urls.regular})`
         document.getElementById("author").innerHTML = `
-            <p class="bottom-left">Photographer: ${data.user.username}</p>
+            <p class="bottom-left">Photographer: <a href=${data.user.links.self}>${data.user.username}</a> on <a href="https://unsplash.com">Unsplash</a?</p>
         `
     })
 }

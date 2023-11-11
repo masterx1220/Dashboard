@@ -84,12 +84,12 @@ body {
 }
 
 #quote{
-    color: white
+    color: whitesmoke
 }
 
 /*****Topography******/
 p, h1, h2{
-    color: white;
+    color: whitesmoke;
     text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black
 }
 
@@ -127,6 +127,12 @@ p, h1, h2{
     font-size: 1.5em;
     text-align: right;
     font-style: italic;
+}
+
+a{
+    text-decoration: none;
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+    color: whitesmoke;
 }
 /*****Topography End******/
 
